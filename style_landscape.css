@@ -1,0 +1,141 @@
+:root {
+    --color1: #231F20;
+    --color2: #BB4430;
+    --color3: #7EBDC2;
+    --color4: #7B6D8D;
+    --color5: #C2E812;
+    --color6: #B79CED;
+    --color7: #7161EF;
+    --color8: #FFE347;
+
+    --colorb: hsl(345, 6%, 20%);
+}
+
+* {
+    box-sizing: border-box;
+}
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+img {
+    display: block;
+    /* border: solid var(--colorb); */
+    width: 100%;
+    box-shadow: var(--colorb) 0px 0px 100px 1px;
+}
+#not_this_a {
+    align-self: center;
+    border: solid transparent;
+}
+#not_this_a:hover {
+    border: solid #016499;
+    /* box-shadow: inset 0px 0px 5px 0px var(--colorb); */
+}
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    background-color: #e4e2de;
+    color: darkslategray;
+
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    font-size: 11pt;
+
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.main_bit {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+main {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    gap: 10px;
+}
+
+main a {
+    background-color: var(--color4);
+    width: 33%;
+    padding: 20px;
+    font-size: 24px;
+}
+
+aside {
+    background-color: var(--color3);
+    width: 30%;
+    height: 90vh;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+aside a {
+    background-color: var(--color5);
+    margin: 10px;
+}
+
+footer {
+    background-color: var(--color6);
+    display: flex;
+    font-size: 24px;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+h1 {
+    color: #0e0e0e;
+    font-size: 1.875vw;
+    font-weight: 500;
+    font-style: oblique;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+h1::after {
+    content: "⟶"
+}
+
+.About {
+    background-color: var(--color7)
+}
+.Projects {
+    background-color: var(--color8)
+}
+.CV {
+    background-color: var(--color5)
+}
+.Connect {
+    background-color: var(--color2)
+}
+
+a:not(#not_this_a) {
+    text-decoration: none; /* no underline */
+    background-color: var(--color2);
+    color: var(--color1);
+    
+    padding: 1rem;
+    border: 3px solid var(--color1);
+    border-radius: 1rem;
+
+    display: flex;
+    align-items: flex-end;  /* Bottom */
+    justify-content: flex-start; /* Left */
+}
+a:hover {
+    box-shadow: inset 0px 0px 5px 0px var(--colorb);
+}
